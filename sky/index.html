@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--[if lt IE 9]><script src="./excanvas.min
+.
+
+js"></script><![endif]-->
+	<title>Sky Survey</title>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link href="css/chardinjs.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/bootstrap-slider.min.css" rel="stylesheet">
+
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+	<script src="js/chardinjs.min.js"></script>
+    <script src="js/bootstrap-slider.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYabbeqOtLofQA_fyk4IHCLQOitiU3uP0&libraries=geometry"></script>
+
+<!--
+<style>
+	body {
+		background: #fff;
+		font-family: Helvetica, sans-serif;
+		color: black;
+	}
+	li.options .i {
+		clear: both;
+		min-height: 2em;
+	}
+	li.options .p {
+		display: inline-block;
+		width: 10em;
+	}
+	li.options .o {
+		display: inline-block;
+		margin-right: 16px;
+	}
+	li.options .h {
+		margin-bottom: 1em;
+		display: inline-block;
+		opacity: 0.2;
+		filter: alpha(20);
+	}
+	li.options .i:hover .h {
+		opacity: 0.7;
+		filter: alpha(70);
+	}
+</style>-->
+<!--<script src="jquery-1.10.0.min.js"></script>-->
+<style>
+    body {
+        font: 400 15px Lato, sans-serif;
+        line-height: 1.8;
+        color: #818181;
+        overflow: hidden;
+    }
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.jumbotron {
+    background-color: #3F2A5E;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+}
+.container-fluid {
+    padding:60px 50px;
+}
+.bg-grey {
+    background-color: #f6f6f6;
+}
+.logo-small {
+    color: #f4511e;
+    font-size: 50px;
+}
+.logo {
+    color: #f4511e;
+    font-size: 200px;
+}
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+.item span {
+    font-style: normal;
+}
+.panel {
+    border: 0px !important;
+    transition: box-shadow 0.5s;
+}
+.panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+.panel-footer .btn:hover {
+    background-color: #fff !important;
+    color: #f4511e;
+}
+.panel-heading {
+    color: white !important;
+    background-color: #0f285f !important;
+    padding: 25px;
+}
+.panel-footer {
+    background-color: white !important;
+}
+.panel-footer h3 {
+    font-size: 32px;
+}
+.panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+}
+.panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+}
+
+.list-group-item a:hover {
+    color: black !important;
+}
+
+.navbar {
+    margin-bottom: 0;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    background-color: transparent;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+    background-color: transparent;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #0f2d5e !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+}
+
+.survey-infobox {
+	position: absolute;
+	font-size: 0.8em;
+	float: left;
+	width: 150px;
+}
+
+.sidebar-infobox {
+    position: relative;
+    z-index: -1;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.survey-infoitem {
+	padding: 2px 5px !important; 
+}
+
+#zoomButtons {
+    position:absolute;
+    top: 460px;
+    left: 95%;
+    right: 10%;
+    height:100px;
+    width: 30px;
+}
+
+#zoomButtons.toggled {
+    position:absolute;
+    top: 460px;
+    left: 80%;
+    right: 20%;
+    height:100px;
+    width: 30px;
+}
+
+.close-button {
+    position: relative;
+    display:block;
+    float:right;
+    width:30px;
+    height:29px;
+    background:url(pics/CloseButton.png) no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+    margin-top: -12px;
+    margin-right: 5px;
+}
+
+#sliderDiv .slider-track{
+    background: red;
+    background: -moz-linear-gradient( top ,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 255, 0, 1) 15%,
+        rgba(0, 255, 0, 1) 30%,
+        rgba(0, 255, 255, 1) 50%,
+        rgba(0, 0, 255, 1) 65%,
+        rgba(255, 0, 255, 1) 80%,
+        rgba(255, 0, 0, 1) 100%);
+    background: -webkit-gradient(linear,  left top,  left bottom, 
+        color-stop(0%, rgba(255, 0, 0, 1)), 
+        color-stop(15%, rgba(255, 255, 0, 1)),
+        color-stop(30%, rgba(0, 255, 0, 1)),
+        color-stop(50%, rgba(0, 255, 255, 1)),
+        color-stop(65%, rgba(0, 0, 255, 1)),
+        color-stop(80%, rgba(255, 0, 255, 1)),
+        color-stop(100%, rgba(255, 0, 0, 1)));
+}
+
+
+#sliderDiv .slider-handle {
+    border-left-color: white;
+    margin-left: -3px;
+}
+
+#sliderDiv .slider-selection {
+    display: none;
+}
+
+#sliderDiv .slider-track-high {
+    background-color: black;
+    opacity: 0.75;
+}
+
+#sliderDiv .slider-track-low {
+    background-color: black;
+    opacity: 0.75;
+}
+</style>
+
+<script src="js/virtualsky.js" type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+        function inside(point, vs) {
+            // ray-casting algorithm based on
+            // http://www.ecse.rpi.edu/Homepages/wrf/Research/Short_Notes/pnpoly.html
+
+            var x = point[0], y = point[1];
+
+            var inside = false;
+            for (var i = 0, j = vs.length - 1; i < vs.length; j = i++) {
+                var xi = vs[i][0], yi = vs[i][1];
+                var xj = vs[j][0], yj = vs[j][1];
+
+                var intersect = ((yi > y) != (yj > y))
+                    && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+                if (intersect) inside = !inside;
+            }
+
+            return inside;
+        };
+
+// 		planetarium = $.virtualsky({id:'preview',width:500,height:350});
+		window.onload = function(){
+			skydefault = $.virtualsky({});
+			$('.version').html(skydefault.version);
+			planetarium = $.virtualsky({
+				width: window.innerWidth,
+				height: (window.innerHeight),
+                id: 'starmap1',
+                projection: 'gnomic',
+                latitude: 214,
+                longitude: 53,
+                negative: false,
+                constellations: true,
+                showstars: true,
+                keyboard: true,
+                showgalaxy: false,
+                gridlines_az: true,
+				gridlines_eq: false,
+				gridlines_gal: false,
+				showdate: false,
+				showposition: false
+
+//                 fov: '50'
+        	});
+			planetarium.draw();
+			// update();
+
+			$('#settingsButton').css({top: ((window.innerHeight/2) - 120) + 'px'});
+
+			$('#zoomButtons').css({top: (window.innerHeight - 120) + 'px'})
+
+		   $('button#locate').on('click',function(){
+		   		   coords = $("#surveyOpts").val().split(",")
+
+		   		   console.log(coords)
+
+				   planetarium.panTo(parseFloat(coords[0]),parseFloat(coords[1]),3000)
+		   });
+
+		    $("#surveyToggle").click(function(e) {
+    			planetarium.showsurveys = !planetarium.showsurveys;
+    			planetarium.draw();
+    		});
+
+    		$("#starToggle").click(function(e) {
+    			planetarium.showstars = !planetarium.showstars;
+    			planetarium.draw();
+    		});
+
+    		$("#constellationToggle").click(function(e) {
+    			planetarium.constellation.lines = !planetarium.constellation.lines;
+    			planetarium.draw();
+    		});
+
+    		$("#colToggle").click(function(e) {
+                if (planetarium.negative) {
+                    $(".navbar-brand").css('color', 'white !important');
+                } else {
+                    $(".navbar-brand").css('color', 'black !important');
+                }
+    			planetarium.negative = !planetarium.negative;
+    			planetarium.draw();
+    		});
+
+    		$("#zoomInButton").click(function(e) {
+    			planetarium.changeFOV(.5).draw();
+    		});
+
+    		$("#zoomOutButton").click(function(e) {
+    			planetarium.changeFOV(-.5).draw();
+    		});
+
+            $('#projectionToggle').change(function() {
+               if (this.value == 'polar'){
+                   planetarium.selectProjection('polar');
+                   planetarium.draw();
+               } else if (this.value == 'stereo'){
+                   planetarium.selectProjection('stereo');
+                   planetarium.draw();
+               } else if (this.value == 'lambert'){
+                   planetarium.selectProjection('lambert');
+                   planetarium.draw();
+               } else if (this.value == 'equirectangular'){
+                   planetarium.selectProjection('equirectangular');
+                   planetarium.draw();
+               } else if (this.value == 'mollweide'){
+                   planetarium.selectProjection('mollweide');
+                   planetarium.draw();
+               } else if (this.value == 'planechart') {
+                   planetarium.selectProjection('planechart');
+                   planetarium.draw();
+               } else if (this.value == 'gnomic'){
+                   planetarium.selectProjection('gnomic');
+                   planetarium.draw();
+               }
+           });
+
+    		$('input[type=radio][name=gridlineOption]').change(function() {
+		        if (this.value == 'AZ') {
+		            planetarium.grid.gal = false;
+		        	planetarium.grid.az = true;
+		        	planetarium.grid.eq = false;
+		        	planetarium.draw();
+		        }
+		        else if (this.value == 'EQ') {
+		            planetarium.grid.gal = false;
+		        	planetarium.grid.az = false;
+		        	planetarium.grid.eq = true;
+		        	planetarium.draw();
+		        } else if (this.value == 'GAL') {
+		        	planetarium.grid.gal = true;
+		        	planetarium.grid.az = false;
+		        	planetarium.grid.eq = false;
+		        	planetarium.draw();
+		        }
+		    });
+
+            $('button#goToLoc').on('click',function(){
+                   var ra = parseFloat($("#raIn").val());
+                   var dec = parseFloat($("#decIn").val());
+
+                   if (isNaN(ra) || isNaN(dec)) {
+                        return;
+                   } else {
+                       planetarium.panTo(ra, dec,3000);
+                   }
+           });
+
+            $('button#filterAtLoc').on('click',function(){
+                   var ra = parseFloat($("#raIn2").val());
+                   var dec = parseFloat($("#decIn2").val());
+
+                   ra = (ra%360)*planetarium.d2r;
+                   dec = dec*planetarium.d2r;
+
+                   if (isNaN(ra) || isNaN(dec)) {
+                        return;
+                   } else {
+                        myPoint = planetarium.radec2xy(ra, dec);
+                        myPoint = [ myPoint.x, myPoint.y ];
+
+                        for (var i = 0;  i < planetarium.surveys.length; i++) {
+                            polygon = [];
+
+                            for (var j = 0; j < planetarium.surveys[i].coords.length; j += 2) {
+                                xypoint = planetarium.radec2xy(planetarium.surveys[i].coords[j], planetarium.surveys[i].coords[j + 1]);
+                                xypoint = [ xypoint.x, xypoint.y ];
+
+                                polygon.push(xypoint);
+                            }
+
+                            if (inside(myPoint, polygon)) {
+                                planetarium.surveys[i].display = "show";
+
+                                if (pinned.indexOf(planetarium.surveys[i].name) == -1) {
+                                    if (!$("#right-sidebar-wrapper").hasClass("toggled")) {
+                                        $("#right-sidebar-wrapper").toggleClass("toggled");
+                                        $("#zoomButtons").toggleClass("toggled");
+                                    }
+
+                                    currDiv = '<li href="#" class="list-group-item active survey-infoitem">' +
+                                        planetarium.surveys[i].name + 
+                                        "</li><li href=\"#\" class=\"list-group-item survey-infoitem\">Area: " + planetarium.surveys[i].attribs.Area + "</li>" +
+                                        "<li href=\"#\" class=\"list-group-item survey-infoitem\">Band: " + planetarium.surveys[i].attribs.band + "</li>" +
+                                        "<li href=\"#\" class=\"list-group-item survey-infoitem\">Date: " + planetarium.surveys[i].attribs.date + "</li>" +
+                                        "<li href=\"#\" class=\"list-group-item survey-infoitem\">Telescope: " + planetarium.surveys[i].attribs.telescope + "</li>";
+
+                                    currDiv = '<div id="panel"><a class="close-button" href="#""></a><li><ul class="list-group sidebar-infobox">' + currDiv + "</div></ul></li>";    
+
+                                    $("#right-sidebar-nav").append(currDiv);
+
+                                    pinned.push(planetarium.surveys[i].name);
+
+                                    $(".close-button").click(function(e) {
+                                        var toDel = $(this).parent();
+                                        toDel.hide('slow', function(){ 
+                                            $(this).remove(); 
+                                            pinned.splice(pinned.indexOf($(this).parent().find("ul").find("li").eq(0).text()), 1);
+                                            if (pinned.length == 0) {
+                                                $("#right-sidebar-wrapper").toggleClass("toggled");
+                                                $("#zoomButtons").toggleClass("toggled");
+                                            }
+                                        });
+                                        
+                                    })
+                                }
+
+                            } else {
+                                planetarium.surveys[i].display = "hide";
+                            }
+                        }
+
+                        planetarium.draw()
+                   }
+           });
+
+            $("#resetFilters").on('click', function() {
+                for (var i = 0;  i < planetarium.surveys.length; i++) {
+                    planetarium.surveys[i].display = "show";
+                }
+
+                planetarium.draw();
+            })
+
+            $('button#setLatLong').on('click',function(){
+                   var lat = parseFloat($("#latIn").val());
+                   var lng = parseFloat($("#longIn").val());
+
+                   if (isNaN(lat) || isNaN(lng)) {
+                        return;
+                   } else {
+                       planetarium.setLatitude(lat);
+                       planetarium.setLongitude(lng);
+                       planetarium.draw();
+                   }
+           });
+
+            $('#searchForObj').on('click', function() {
+               toSend = $('#searchObjectName').val()
+
+               toSend = encodeURIComponent(toSend).replace(/%20/g,'+')
+
+               sesameURL = "http://cdsweb.u-strasbg.fr/cgi-bin/nph-sesame/-ox/~SNVA?" + toSend
+
+               $.ajax({
+                 url: sesameURL,
+                 type: "get", //send it through get method
+                 dataType: "xml",
+                 success: function(response) {
+                    $('#modalResults').text('');
+                    var resolver = $(response).find("Resolver").each(function() {
+                        var name = $(this).find('oname').text();
+                        var fail = $(this).find('INFO').text();
+
+                        if (fail != "Zero (0) answers") {
+                            var ajaxRA = $(this).find('jradeg').text();
+                            var ajaxDec = $(this).find('jdedeg').text();
+                            var tableRow = "<tr><td> " + name + "</td>";
+                            tableRow += "<td> " + ajaxRA + "</td>"
+                            tableRow += "<td> " + ajaxDec + "</td>";
+                            tableRow += "<td> " + $(this).attr('name') + "</td>";
+                            tableRow += "<td><a href=\"#\" onclick=\"selectResult(this)\" class=\"btn btn-info\" role=\"button\">Select</a></td></tr>";
+
+                            $('#modalResults').append(tableRow);
+                        } else {
+                            var tableRow = "<tr><td>No Result Found</td>";
+                            tableRow += "<td> </td>";
+                            tableRow += "<td> </td>";
+                            tableRow += "<td> " + $(this).attr('name') + "</td>";
+                            tableRow += "<td></td></tr>";
+
+                            $('#modalResults').append(tableRow);
+                        }
+                    });
+                    $('#searchModal').modal('show');
+                   // var resolvers = response.getElementsByTagName("Resolver")[0];
+                   // var name = resolvers.find('oname').text();
+
+                   // alert (name + ':' + ajaxRA + ", " + ajaxDec)
+                 },
+                 error: function(xhr) {
+                   //Do Something to handle error
+                 }
+               });
+           })
+
+		   // $('body').chardinJs('start');
+
+        };
+});
+
+function update(el) {
+			property = (el) ? el.name : "";
+			value = (el) ? el.value : "";
+
+			planetarium.draw();
+
+			var str = "<iframe width=\""+planetarium.wide+"\" height=\""+planetarium.tall+"\" frameborder=\"0\" scrolling=\"no\" marginheight=\"0\" marginwidth=\"0\" src=\"";
+			var uri = "http://lcogt.net/virtualsky/embed/?";
+			uri += "longitude="+(planetarium.longitude*planetarium.r2d);
+			uri += "&latitude="+(planetarium.latitude*planetarium.r2d);
+
+			if(skydefault.showgalaxy != planetarium.showgalaxy) uri += "&showgalaxy="+planetarium.showgalaxy;
+
+			str += encodeURI(uri);
+			str += "\" allowTransparency=\"true\"></iframe>";
+
+			el = document.getElementById('embedcode');
+// 			el.value = str;
+
+
+}
+
+function selectResult(el) {
+    var name = $(el).parent().parent().children().eq(0).text();
+    var searchRa = parseFloat($(el).parent().parent().children().eq(1).text());
+    var searchDec = parseFloat($(el).parent().parent().children().eq(2).text());
+    planetarium.panTo(searchRa, searchDec, 2000);
+    planetarium.addPointer(searchRa, searchDec, name);
+    $('#searchModal').modal('hide');
+    $('#modalResults').text('');
+}
+
+
+</script>
+
+    <!-- firebase -->
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+</head>
+
+<body id="home">
+
+<div id="wrapper" class="toggled">
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="searchModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Search Results</h4>
+              </div>
+              <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>RA</th>
+                        <th>DEC</th>
+                        <th>Resolver</th>
+                        <th>&nbsp;</th>
+                      </tr>
+                    </thead>
+                    <tbody id="modalResults">
+                    </tbody>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+
+            	<li class = 'sidebar-brand'>
+                </li>
+
+                <br>
+
+                <li>
+                    <div class="panel-group" role="tablist">
+                       <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="collapseListGroupHeading2">
+                             <h4 class="panel-title"> <a class="" role="button" data-toggle="collapse" href="#collapseListGroup2" aria-expanded="true" aria-controls="collapseListGroup2"> Navigation Settings </a> </h4>
+                          </div>
+                          <div id="collapseListGroup2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading2" aria-expanded="true">
+                             <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class = "row">
+                                        <span style = "padding-left: 15px;">Search for Object:</span>
+                                        <div class = "row" style = "padding-left: 15px; padding-right: 15px;">
+                                            <div class = 'col-md-8'>
+                                                <input class="form-control" id='searchObjectName'></select>
+                                            </div>
+
+                                            <div class = 'col-md-4'>
+                                                <button type="button" id="searchForObj" class="btn btn-primary btn-md btn-block"><span class="glyphicon glyphicon-search"></span> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li class="list-group-item">
+                                    <div class = "row">
+                                        <span style = "padding-left: 15px;">Go to Survey:</span>
+                                        <div class = "row" style = "padding-left: 15px; padding-right: 15px;">
+                                            <div class = 'col-md-8'>
+                                                <select class="form-control" id='surveyOpts'></select>
+                                            </div>
+
+                                            <div class = 'col-md-4'>
+                                                <button type="button" id="locate" class="btn btn-primary btn-md btn-block"><span class="glyphicon glyphicon-search"></span> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <div class = "row">
+                                        <span style = "padding-left: 10px;">Set Lat/Long:</span>
+                                    <div class = "row" style = "padding-left: 15px; padding-right: 15px;">
+                                        <div class = 'col-md-4'>
+                                            <input class="form-control" id='latIn' placeholder="LAT"></input>
+                                        </div>
+
+                                        <div class = 'col-md-4'>
+                                                <input class="form-control" id='longIn' placeholder="LONG"></input>
+                                        </div>
+
+                                        <div class = 'col-md-4'>
+                                            <button type="button" id="setLatLong" class="btn btn-primary btn-md btn-block"><span class="glyphicon glyphicon-screenshot"></span> </button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <div class = "row">
+                                        <span style = "padding-left: 10px;">Go to RA/DEC:</span>
+                                        <div class = "row" style = "padding-left: 15px; padding-right: 15px;">
+                                            <div class = 'col-md-4'>
+                                                <input class="form-control" id='raIn' placeholder="RA"></input>
+                                            </div>
+
+                                            <div class = 'col-md-4'>
+                                                    <input class="form-control" id='decIn' placeholder="DEC"></input>
+                                            </div>
+
+                                            <div class = 'col-md-4'>
+                                                <button type="button" id="goToLoc" class="btn btn-primary btn-md btn-block"><span class="glyphicon glyphicon-screenshot"></span> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                             </ul>
+                          </div>
+                       </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="panel-group" role="tablist">
+                       <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
+                             <h4 class="panel-title"> <a class="" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="true" aria-controls="collapseListGroup1"> Display Settings </a> </h4>
+                          </div>
+                          <div id="collapseListGroup1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading1" aria-expanded="true">
+                             <ul class="list-group">
+                                <li class="list-group-item"><a href = "#" id="surveyToggle">Show Surveys </a></li>
+                                <li class="list-group-item"><a href = "#" id="colToggle">Negative </a></li>
+                                <li class="list-group-item"><a href = "#" id="starToggle">Show Stars</a></li>
+                                <li class="list-group-item"><a href = "#" id="constellationToggle">Show Constellations</a></li>
+                                <li class="list-group-item">
+                                    <div class = "row">
+                                        <a href="#">
+                                        Gridlines<br>
+                                            <label class="radio-inline">
+                                              <input type="radio" name="gridlineOption" id="azRadio" value="AZ" checked="checked"> AZ
+                                            </label>
+                                            <label class="radio-inline">
+                                              <input type="radio" name="gridlineOption" id="eqRadio" value="EQ"> EQ
+                                            </label>
+                                            <label class="radio-inline">
+                                              <input type="radio" name="gridlineOption" id="galRadio" value="GAL"> GAL
+                                            </label>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"><a href="#">
+                                    <div class="row">
+                                        <div class = "col-md-12">
+                                             Map Projection<br>
+                                             <select class="form-control" id="projectionToggle">
+                                               <option value="polar">Polar</option>
+                                               <option value="stereo">Stereo</option>
+                                               <option value="lambert">Lambert</option>
+                                               <option value="equirectangular">Equirectangular</option>
+                                               <option value="mollweide">Mollweide</option>
+                                               <option value="planechart">Planechart</option>
+                                               <option selected value="gnomic">Gnomic (default)</option>
+                                           </select>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                             </ul>
+                          </div>
+                       </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="panel-group" role="tablist">
+                       <div class="panel panel-default">
+                          <div class="panel-heading" role="tab" id="collapseListGroupHeading3">
+                             <h4 class="panel-title"> <a class="" role="button" data-toggle="collapse" href="#collapseListGroup3" aria-expanded="true" aria-controls="collapseListGroup3"> Filter Settings </a> </h4>
+                          </div>
+                          <div id="collapseListGroup3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading3" aria-expanded="true">
+                             <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class = "row">
+                                        <span style = "padding-left: 10px;">Filter at RA/DEC:</span>
+                                        <div class = "row" style = "padding-left: 15px; padding-right: 15px;">    
+                                            <div class = 'col-md-4'>
+                                                <input class="form-control" id='raIn2' placeholder="RA"></input>
+                                            </div>
+
+                                            <div class = 'col-md-4'>
+                                                    <input class="form-control" id='decIn2' placeholder="DEC"></input>
+                                            </div>
+
+                                            <div class = 'col-md-4'>
+                                                <button type="button" id="filterAtLoc" class="btn btn-primary btn-md btn-block"><span class="glyphicon glyphicon-screenshot"></span> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <a href = "#" id="resetFilters">Reset Filters</a>
+                                </li>
+
+                             </ul>
+                          </div>
+                       </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav id="navBar" class="navbar navbar-default navbar-fixed-top">
+			    <div class="container">
+			        <div class="navbar-header">
+			            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			                <span class="icon-bar"></span>
+			            </button>
+			            <a class="navbar-brand" href="#home">Sky Survey</a>
+			        </div>
+			        <div class="collapse navbar-collapse" id="myNavbar">
+			            <ul class="nav navbar-nav navbar-right">
+			                <li><a href="#home">HOME</a></li>
+			                <li><a href="upload.html">UPLOAD SURVEY</a></li>
+			                <li><a href="contact.html">CONTACT</a></li>
+			            </ul>
+			        </div>
+			    </div>
+			</nav>
+
+			<div class="text-center">
+
+			<!-- Insert Map Here -->
+			    <div id='mapOverlay' class="center-block" style = "position:relative">
+				    <div id="starmap1" class="center-block" data-intro="<h3><b>The Skymap!</b> The <i>boxes are surveys</i>, with their names displayed along their edges. Drag your mouse to navigate the map. Enjoy!</h3>" data-position="top" style="position:absolute">
+				    </div>
+
+                    <div style="position:fixed; bottom: 15px; left:5px; color: white;">
+                        <span id = "posLabel"></span>
+                    </div>
+
+				    <div id='settingsButton' style="position:absolute; top: 200px; left:0%;">
+				        <a href="#" id='menuToggle'><img src="pics/Settings.png" style="height: 120px;"></a>
+				    </div>
+
+                    <div id='rangeDiv' style="position:fixed; bottom: 0; left: 75%;">
+                        <a href="#" id='rangeToggle'><img src="pics/RangeSlide.png" style="width: 80px;"></a>
+                        
+                        <div id='sliderDiv' style="display: none; background-color: black; padding-top: 30px; padding-bottom:30px;">
+                            <input id="rangeSelect" type="text"/><br/>
+                        </div>
+                    </div>
+
+					<div id='zoomButtons'>
+				    	<a href="#" id="zoomInButton"><img src='pics/ZoomIn.png' style = 'height: 50px; width: 50px;'></a><br>
+				    	<a href="#" id="zoomOutButton"><img src='pics/ZoomOut.png' style = 'height: 50px; width: 50px; padding-top: 5px;'></a>
+				    </div>
+
+			    </div>
+			<!-- <button id="testbox">Move to The Test Box</button> -->
+			</div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+        <div id="right-sidebar-wrapper">
+            <ul id="right-sidebar-nav" class="sidebar-nav">
+
+                <li class = 'sidebar-brand'>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+<!-- Navbar -->
+
+
+</body>
+
+<script type="text/javascript">
+	pinned = [];
+
+    var mySlider = $("#rangeSelect").slider({ 
+        min: 0,
+        max: 10,
+        value: [0,10],
+        focus: true,
+        orientation: "vertical",
+        reversed : true,
+        handle: "triangle" });
+
+    $("#rangeSelect").on("slideStop", function(e) {
+        var valRange = new String(mySlider.slider('getValue'));
+
+        valRange = valRange.split(",");
+        var selected = [];
+        var startRange = -1;
+        var endRange = -1;
+
+        if (valRange.length == 2) {
+            startRange = parseInt(valRange[0]);
+            endRange = parseInt(valRange[1]);
+        }
+
+        for (var i = startRange; i <= endRange; i++) {
+            selected.push(i);
+        }
+
+        planetarium.filterSurveys(selected);
+    });
+
+    $("#menuToggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#navBar").toggleClass("toggled");
+    });
+
+    $("#rangeToggle").click(function(e) {
+        e.preventDefault();
+        $("#sliderDiv").slideToggle();
+    });
+
+    pinBox = function(e) {
+        var title = $(".survey-infobox").find("li").eq(0).text();
+
+        if (pinned.indexOf(title) == -1) {
+            if (!$("#right-sidebar-wrapper").hasClass("toggled")) {
+                $("#right-sidebar-wrapper").toggleClass("toggled");
+                $("#zoomButtons").toggleClass("toggled");
+            }
+
+            currDiv = $(".survey-infobox").html();
+            currDiv = '<div id="panel"><a class="close-button" href="#""></a><li><ul class="list-group sidebar-infobox">' + currDiv + "</div></ul></li>";
+
+            $("#right-sidebar-nav").append(currDiv);
+
+            pinned.push(title);
+
+            $(".close-button").click(function(e) {
+                var toDel = $(this).parent();
+                toDel.hide('slow', function(){ 
+                    $(this).remove(); 
+                    pinned.splice(pinned.indexOf($(this).parent().find("ul").find("li").eq(0).text()), 1);
+                    if (pinned.length == 0) {
+                        $("#right-sidebar-wrapper").toggleClass("toggled");
+                        $("#zoomButtons").toggleClass("toggled");
+                    }
+                });
+                
+            })
+        }
+    }
+</script>
+
+</html>

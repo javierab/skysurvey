@@ -1,0 +1,149 @@
+[HSC-FALL1-EQ]
+handler : rectangle_bounds
+description : "Subaru Hyper Suprime-Cam Fall-1 equatorial survey."
+citation : https://science.nrao.edu/science/surveys/vlass/Wang_WP_rev0.pdf
+ra_range : 22h0m,2h40m
+dec_range : -1d,7d
+coord : C
+survey_type : lss
+instrument : HSC
+
+[HSC-FALL2-EQ]
+handler : rectangle_bounds
+description : "Subaru Hyper Suprime-Cam Fall-2 equatorial survey."
+citation : https://science.nrao.edu/science/surveys/vlass/Wang_WP_rev0.pdf
+ra_range : 1h50m,2h40m
+dec_range : -7d,-1d
+coord : C
+survey_type : lss
+instrument : HSC
+
+[HSC-SPRING-EQ]
+handler : rectangle_bounds
+description : "Subaru Hyper Suprime-Cam Spring equatorial survey."
+citation : https://science.nrao.edu/science/surveys/vlass/Wang_WP_rev0.pdf
+ra_range : 8h30m,15h0m
+dec_range : -2d,5d
+coord : C
+survey_type : lss
+instrument : HSC
+
+[HSC-NORTH]
+handler : rectangle_bounds
+description : "Subaru Hyper Suprime-Cam North survey."
+citation : https://science.nrao.edu/science/surveys/vlass/Wang_WP_rev0.pdf
+ra_range : 13h20m,16h40m
+dec_range : +42.5d,+44d
+coord : C
+survey_type : lss
+instrument : HSC
+
+[WIGGLEZ-0H]
+handler : rectangle_bounds
+description : "WiggleZ 0hr field"
+citation : http://adsabs.harvard.edu/abs/2010MNRAS.401.1429D
+ra_range : 350.1d, 359.1d
+dec_range : -13.4d, +1.8d
+coord : C
+survey_type : lss
+instrument : WiggleZ
+
+[WIGGLEZ-1H]
+handler : rectangle_bounds
+description : "WiggleZ 1hr field"
+citation : http://adsabs.harvard.edu/abs/2010MNRAS.401.1429D
+ra_range : 7.5d, 20.6d
+dec_range : -3.7d, +5.3d
+coord : C
+survey_type : lss
+instrument : WiggleZ
+
+[WIGGLEZ-3H]
+handler : rectangle_bounds
+description : "WiggleZ 3hr field"
+citation : http://adsabs.harvard.edu/abs/2010MNRAS.401.1429D
+ra_range : 43.0d, 52.2d
+dec_range : -18.6d, -5.7d
+coord : C
+survey_type : lss
+instrument : WiggleZ
+
+[WIGGLEZ-9H]
+handler : rectangle_bounds
+description : "WiggleZ 9hr field"
+citation : http://adsabs.harvard.edu/abs/2010MNRAS.401.1429D
+ra_range : 133.7d, 148.8d
+dec_range : -1.0d, +8.0d
+coord : C
+survey_type : lss
+instrument : WiggleZ
+
+[WIGGLEZ-11H]
+handler : rectangle_bounds
+description : "WiggleZ 11hr field"
+citation : http://adsabs.harvard.edu/abs/2010MNRAS.401.1429D
+ra_range : 153.0d, 172.0d
+dec_range : -1.0d, +8.0d
+coord : C
+survey_type : lss
+instrument : WiggleZ
+
+[WIGGLEZ-15H]
+handler : rectangle_bounds
+description : "WiggleZ 15hr field"
+citation : http://adsabs.harvard.edu/abs/2010MNRAS.401.1429D
+ra_range : 210.0d, 230.0d
+dec_range : -3.0d, +7.0d
+coord : C
+survey_type : lss
+instrument : WiggleZ
+
+[WIGGLEZ-22H]
+handler : rectangle_bounds
+description : "WiggleZ 22hr field"
+citation : http://adsabs.harvard.edu/abs/2010MNRAS.401.1429D
+ra_range : 320.4d, 330.2d
+dec_range : -5.0d, +4.8d
+coord : C
+survey_type : lss
+instrument : WiggleZ
+
+[WFIRST-HLS-2]
+handler : rectangle_bounds
+description : "Wide-Field Infrared Survey Telescope High Latitude Survey - rectangular region 2"
+citation : http://wfirst.gsfc.nasa.gov/science/sdt_public/WFIRST-AFTA_SDT_Report_150310_Final.pdf
+ra_range : -11.0d, 7.0d
+dec_range : -55.0d, -35.0d
+coord : E
+survey_type : lss
+instrument : WFIRST
+
+[WFIRST-HLS-4]
+handler : rectangle_bounds
+description : "Wide-Field Infrared Survey Telescope High Latitude Survey - rectangular region 4"
+citation : http://wfirst.gsfc.nasa.gov/science/sdt_public/WFIRST-AFTA_SDT_Report_150310_Final.pdf
+ra_range : -11.0d, 7.0d
+dec_range : -35.0d, -19.0d
+coord : E
+survey_type : lss
+instrument : WFIRST
+
+[KIDS-N-2]
+handler : rectangle_bounds
+description : "Kilo-Degree Survey northern patch 2" 
+citation : http://www.astro-wise.org/projects/KIDS/
+ra_range : 8h40m, 9h8m
+dec_range : -3d, -1d
+coord : C
+survey_type : lss
+instrument : KIDS
+
+[KIDS-S]
+handler : rectangle_bounds
+description : "Kilo-Degree Survey southern patch"
+citation : http://www.astro-wise.org/projects/KIDS/
+ra_range : 22h, 3h30m
+dec_range : -35d, -25d
+coord : C
+survey_type : lss
+instrument : KIDS

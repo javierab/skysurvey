@@ -1,0 +1,11 @@
+[CFHTLENS-W2]
+handler : polygon
+description : "Approximation of the Canada-France-Hawaii Telescope Lensing Survey W2 region"
+citation : https://arxiv.org/abs/1210.8156
+vertex1 : 132.04d, -5.68d
+vertex2 : 132.04d, -0.95d
+vertex3 : 136.86d, -0.95d
+vertex4 : 136.86d, -5.68d
+coord : C
+survey_type : lss
+instrument : CFHTLENS

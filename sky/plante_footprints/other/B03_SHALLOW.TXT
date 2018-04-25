@@ -1,0 +1,11 @@
+[B03-SHALLOW]
+handler : polygon
+description : "Plot of the shallow region for B03. Generated from vertices read off from figure in paper."
+citation : http://arxiv.org/abs/astro-ph/0507494
+vertex1 : 61d,-31d
+vertex2 : 104d,-31d
+vertex3 : 104d,-58d
+vertex4 : 61d,-58d
+coord : C
+survey_type : cmbpol
+instrument : BOOMERANG

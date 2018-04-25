@@ -1,0 +1,299 @@
+$$[SPT-SZ-5;30-55]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 5;30 and Dec -55"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  82.7,-55.0;
+size$$$  15,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-23;30-55]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 23;30 and Dec -55"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  352.5,-55.0;
+size$$$  15,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-21;-60]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 21;30 and Dec -60"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  315.0,-60.0;
+size$$$  30,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-3;30-60]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 3;30 and Dec -60"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  52.5,-60.0;
+size$$$  45,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-21;-50]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 21; and Dec -50"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  315.0,-50.0;
+size$$$  30,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-4;10-50]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 4;10 and Dec -50"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  62.5,-50.0;
+size$$$  25,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-0;50-50]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 0;50 and Dec -50"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  12.5,-50.0;
+size$$$  25,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-2;30-50]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 2;30 and Dec -50"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  37.5,-50.0;
+size$$$  25,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-1;-60]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 1; and Dec -60"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  15.0,-60.0;
+size$$$  30,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-5;30-45]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 5;30 and Dec -45"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  82.5,-45.0;
+size$$$  15,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-6;30-55]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 6;30 and Dec -55"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  97.5,-55.0;
+size$$$  15,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-23;-62.5]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 23; and Dec -62.5"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  345.0,-62.5;
+size$$$  30,5;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-21;-42.5]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 21; and Dec -42.5"
+citation  http//arxiv.org/abs/1210.7231
+center$$$ 315.0,-42.5;
+size$$$  30,5;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-22;30-55]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 22;30 and Dec -55"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  337.5,-55.0;
+size$$$  15,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-23;-45]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 23; and Dec -45"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  345.0,-45.0;
+size$$$  30,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-6;-62.5]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 6; and Dec -62.5"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  90.0,-62.5;
+size$$$  30,5;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-3;30-42.5]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 3;30 and Dec -42.5"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  52.5,-42.5;
+size$$$  45,5;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-1;-42.5]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 1; and Dec -42.5"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  15.0,-42.5;
+size$$$  30,5;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[SPT-SZ-6;30-45]
+handler  rectangle
+description  "SPT-SZ patch centered at RA 6;30 and Dec -45"
+citation  http//arxiv.org/abs/1210.7231
+center$$$  97.5,-45.0;
+size$$$  15,10;
+coord  C
+survey_type  cmb
+instrument  SPT
+
+$$[POLARBEAR-RA23]
+handler  rectangle
+description  "Plots of the RA23 patch for PB. Position is taken from table in paper and size$$$ is chosen so that fraction of sky is consistent with paper."
+citation  http//arxiv.org/abs/1403.2369
+center$$$  23;1;48,-32;48;
+size$$$  3.5,3.5;
+coord  C
+survey_type  cmbpol
+instrument  POLARBEAR
+
+$$[POLARBEAR-RA12]
+handler  rectangle
+description  "Plots of the RA12 patch for PB. Position is taken from table in paper and size$$$ is chosen so that fraction of sky is consistent with paper."
+citation  http//arxiv.org/abs/1403.2369
+center$$$  11;53;0,-0;30;
+size$$$  3.5,3.5;
+coord  C
+survey_type  cmbpol
+instrument  POLARBEAR
+
+$$[POLARBEAR-RA4p5]
+handler  rectangle
+description  "Plots of the RA4p5 patch for PB. Position is taken from table in paper and size$$$ is chosen so that fraction of sky is consistent with paper."
+citation  http//arxiv.org/abs/1403.2369
+center$$$  4;40;12,-45;
+size$$$  3.5,3.5;
+coord  C
+survey_type  cmbpol
+instrument  POLARBEAR
+
+$$[COSMOS]
+handler  rectangle
+description  "COSMOS Field"
+citation  http//arxiv.org/pdf/astro-ph/0612305.pdf
+center$$$  10;00;28.6,+02;12;21.0
+size$$$  1.4,1.4;
+coord  C
+survey_type  lss
+instrument  COSMOS
+
+$$[WFIRST-HLS-1]
+handler  rectangle
+description  "Wide-Field Infrared Survey Telescope High Latitude Survey - rectangular region 1"
+citation  http//wfirst.gsfc.nasa.gov/science/sdt_public/WFIRST-AFTA_SDT_Report_150310_Final.pdf
+center$$$  -19.5, -33.0;
+size$$$  17.0, 20.0;
+coord  E
+survey_type  lss
+instrument  WFIRST
+
+$$[WFIRST-HLS-3]
+handler  rectangle
+description  "Wide-Field Infrared Survey Telescope High Latitude Survey - rectangular region 3"
+citation  http//wfirst.gsfc.nasa.gov/science/sdt_public/WFIRST-AFTA_SDT_Report_150310_Final.pdf
+center$$$  16.0, -45.0;
+size$$$  18.0, 20.0;
+coord  E
+survey_type  lss
+instrument  WFIRST
+
+$$[WFIRST-HLS-5]
+handler  rectangle
+description  "Wide-Field Infrared Survey Telescope High Latitude Survey - rectangular region 5"
+citation  http//wfirst.gsfc.nasa.gov/science/sdt_public/WFIRST-AFTA_SDT_Report_150310_Final.pdf
+center$$$  16.0, -27.0;
+size$$$  18.0, 16.0;
+coord  E
+survey_type  lss
+instrument  WFIRST
+
+$$[WFIRST-HLS-6]
+handler  rectangle
+description  "Wide-Field Infrared Survey Telescope High Latitude Survey - rectangular region 6"
+citation  http//wfirst.gsfc.nasa.gov/science/sdt_public/WFIRST-AFTA_SDT_Report_150310_Final.pdf
+center$$$  34.0, -37.0;
+size$$$  18.0, 36.0;
+coord  E
+survey_type  lss
+instrument  WFIRST
+
+$$[WFIRST-HLS-7]
+handler  rectangle
+description  "Wide-Field Infrared Survey Telescope High Latitude Survey - rectangular region 7"
+citation  http//wfirst.gsfc.nasa.gov/science/sdt_public/WFIRST-AFTA_SDT_Report_150310_Final.pdf
+center$$$  14.5, -66.5;
+size$$$  19.0, 23.0;
+coord  E
+survey_type  lss
+instrument  WFIRST
+
+$$[WFIRST-HLS-8]
+handler  rectangle
+description  "Wide-Field Infrared Survey Telescope High Latitude Survey - rectangular region 8"
+citation  http//wfirst.gsfc.nasa.gov/science/sdt_public/WFIRST-AFTA_SDT_Report_150310_Final.pdf
+center$$$  37.0, -66.5;
+size$$$  26.0, 23.0;
+coord  E
+survey_type  lss
+instrument  WFIRST
+
+$$[WFIRST-HLS-9]
+handler  rectangle
+description  "Wide-Field Infrared Survey Telescope High Latitude Survey - rectangular region 9"
+citation  http//wfirst.gsfc.nasa.gov/science/sdt_public/WFIRST-AFTA_SDT_Report_150310_Final.pdf
+center$$$  46.5, -47.5;
+size$$$  7.0, 15.0;
+coord  E
+survey_type  lss
+instrument  WFIRST

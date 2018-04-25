@@ -1,0 +1,370 @@
+[PLANCK-DUSTPOL]
+handler : hpx_file
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/Planck_DustPol_Amp_256.fits.gz
+description : "Polarized dust emission map from Planck commander component separation. sqrt(Q^2 + U^2)"
+citation : http://irsa.ipac.caltech.edu/data/Planck/release_2/all-sky-maps/maps/component-maps/foregrounds/COM_CompMap_DustPol-commander_1024_R2.00.fits
+coord : G
+checksum : 292fd142a9603c152fd580d1110c7542
+survey_type : background
+instrument : Planck
+hips : yes
+
+[PLANCK-DUST]
+handler : hpx_file
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/Planck_Dust_256.fits.gz
+description : "Planck commander thermal dust map"
+citation : http://irsa.ipac.caltech.edu/data/Planck/release_2/all-sky-maps/maps/component-maps/foregrounds/COM_CompMap_dust-commander_0256_R2.00.fits
+coord : G
+checksum : fda17e17e204b36a43963da2beb02841
+survey_type : background
+instrument : Planck
+hips : yes
+
+[PLANCK-SYNCH]
+handler : hpx_file
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/Planck_Synch_256.fits.gz
+description : "Planck commander synchrotron map"
+citation : http://irsa.ipac.caltech.edu/data/Planck/release_2/all-sky-maps/maps/component-maps/foregrounds/COM_CompMap_Synchrotron-commander_0256_R2.00.fits
+coord : G
+checksum : aab6353ec249d331c8617740990334c7
+survey_type : background
+instrument : Planck
+hips : yes
+
+[PLANCK-SYNCHPOL]
+handler : hpx_file
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/Planck_SynchPol_Amp_256.fits.gz
+description : "Planck commander synchrotron polarization map. sqrt(Q^2 + U^2)"
+citation : http://irsa.ipac.caltech.edu/data/Planck/release_2/all-sky-maps/maps/component-maps/foregrounds/COM_CompMap_SynchrotronPol-commander_0256_R2.00.fits
+coord : G
+checksum : 130922876dd310d6e8b31d88f27cc6e6
+survey_type : background
+instrument : Planck
+hips : yes
+
+[PLANCK-UT78]
+handler : hpx_file
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/Planck_MaskInt_UT78_256.fits.gz
+description : "Planck UT78 Mask"
+citation : http://irsa.ipac.caltech.edu/data/Planck/release_2/all-sky-maps/maps/component-maps/cmb/COM_CMB_IQU-common-field-MaskInt_2048_R2.01.fits
+coord : G
+checksum : a6641fc8370b7a9806e0d716450ea6e6
+survey_type : cmb
+instrument : Planck
+hips : yes
+
+[PLANCK-UP78]
+handler : hpx_file
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/Planck_MaskPol_UP78_256.fits.gz
+description : "Planck UP78 Mask"
+citation : http://irsa.ipac.caltech.edu/data/Planck/release_2/all-sky-maps/maps/component-maps/cmb/COM_CMB_IQU-common-field-MaskPol_1024_R2.01.fits
+coord : G
+checksum : 8ea6ef1c01cacdce09188946873ee2c6
+survey_type : cmbpol
+instrument : Planck
+hips : yes
+
+[WMAP-TEMP-MASK]
+handler : hpx_file
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/wmap_temperature_kq85_analysis_mask_r9_9yr_v5.fits.gz
+description : "Temperature data analysis mask"
+citation : http://lambda.gsfc.nasa.gov/data/map/dr5/ancillary/masks/wmap_temperature_kq85_analysis_mask_r9_9yr_v5.fits
+coord : G
+checksum : 3cd367f7534969a294a17880570e2f6b
+survey_type : cmb
+instrument : WMAP
+hips : yes
+
+[WMAP-POL-MASK]
+handler : hpx_file
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/wmap_polarization_analysis_mask_r9_9yr_v5.fits.gz
+description : "Polarization data analysis mask"
+citation : http://lambda.gsfc.nasa.gov/data/map/dr5/ancillary/masks/wmap_polarization_analysis_mask_r9_9yr_v5.fits
+coord : G
+checksum : 97908bde9831a7363ec1d78ab7b4816a
+survey_type : cmbpol
+instrument : WMAP
+hips : yes
+
+[ACT]
+handler : combination
+description : "All ACT survey regions"
+citation : http://lambda.gsfc.nasa.gov/product/act/act_weights2013_get.cfm
+components : ACT-EQU,ACT-SOUTH
+survey_type : cmb
+instrument : ACT
+
+[ACT-EQU]
+handler : hpx_file
+description : "Observations of the EQU region of the ACT experiment at 148 GHz in Seasons 3 and 4. Healpix mapping of the released WCS hitmaps."
+citation : http://lambda.gsfc.nasa.gov/product/act/act_weights2013_get.cfm
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/ACT_148_equ_hits_hpx.fits.gz
+coord : C
+checksum : aa7ddf649a139e354b223463ca33811c
+survey_type : cmb
+instrument : ACT
+hips : yes
+
+[ACT-SOUTH]
+handler : hpx_file
+description : "Observations of the South region of the ACT experiment at 148 GHz in Seasons 2, 3, and 4. Healpix mapping of the released WCS hitmaps."
+citation : http://lambda.gsfc.nasa.gov/product/act/act_weights2013_get.cfm
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/ACT_148_south_hits_hpx.fits.gz
+coord : C
+checksum : d1262550026a9abca8842b1b60bdd21c
+survey_type : cmb
+instrument : ACT
+hips : yes
+
+[ACTPOL]
+handler : combination
+description : "ACTPol regions from 2013-2014 observations"
+citation : https://arxiv.org/abs/1610.02360
+components : ACTPOL-D5, ACTPOL-D6, ACTPOL-D56-PA1, ACTPOL-D56-PA2
+survey_type : cmbpol
+instrument : ACTPol
+
+[ACTPOL-D5]
+handler : hpx_file
+description : "ACTPol Region D5 in 2013-2014 observations"
+citation : https://arxiv.org/abs/1610.02360
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/ACTPol_148_D5_PA1_S1_1way_hits_hpx.fits.gz
+coord : C
+checksum : d1ec62092cbb3cbef9aaee11bd7a4ca2
+survey_type : cmbpol
+instrument : ACTPol
+hips : yes
+
+[ACTPOL-D6]
+handler : hpx_file
+description : "ACTPol Region D6 in 2014-2014 observations"
+citation : https://arxiv.org/abs/1610.02360
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/ACTPol_148_D6_PA1_S1_1way_hits_hpx.fits.gz
+coord : C
+checksum : c16a8734bc99b39ef02ec5369f21fb7f
+survey_type : cmbpol
+instrument : ACTPol
+hips : yes
+
+[ACTPOL-D56-PA1]
+handler : hpx_file
+description : "ACTPol Region D56 PA1 in 2013-2014 observations"
+citation : https://arxiv.org/abs/1610.02360
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/ACTPol_148_D56_PA1_S2_1way_hits_hpx.fits.gz
+coord : C
+checksum : c45d56cb6830e5658be992a10fdc3ca2
+survey_type : cmbpol
+instrument : ACTPol
+hips : yes
+
+[ACTPOL-D56-PA2]
+handler : hpx_file
+description : "ACTPol Region D56 PA2 in 2013-2014 observations"
+citation : https://arxiv.org/abs/1610.02360
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/ACTPol_148_D56_PA2_S2_1way_hits_hpx.fits.gz
+coord : C
+checksum : 729e4deec9bc759d9c7e80c69caa1627
+survey_type : cmbpol
+instrument : ACTPol
+hips : yes
+
+[SPT]
+handler : hpx_file
+description : "The SPT observations from their data release 1. Healpix mapping of their released 150 GHz ZEA hitmap."
+citation : http://lambda.gsfc.nasa.gov/product/spt/dr1/wgts_get.cfm
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/SPT_150_hits_hpx.fits.gz
+coord : C
+checksum : 2e25d17d333973e3c40a8c9dfa4517ba
+survey_type : cmb
+instrument : SPT
+hips : yes
+
+[QUIET-Q-CMB-1]
+handler : hpx_file
+description : "Plot of the CMB-1 field for QUIET's Q band."
+citation : "Private communication"
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Qband_CMB-1_hitmap.fits.gz
+coord : G
+checksum : e253fd262c10edfb4aaf7364c677832c
+survey_type : cmbpol
+instrument : QUIET
+hips : yes
+
+[QUIET-Q-CMB-2]
+handler : hpx_file
+description : "Plot of the CMB-2 field for QUIET's Q band."
+citation : "Private communication"
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Qband_CMB-2_hitmap.fits.gz
+coord : G
+checksum : 15d565e3ff368aa93ac908f74b17436d
+survey_type : cmbpol
+instrument : QUIET
+hips : yes
+
+[QUIET-Q-CMB-3]
+handler : hpx_file
+description : "Plot of the CMB-3 field for QUIET's Q band."
+citation : "Private communication"
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Qband_CMB-3_hitmap.fits.gz
+coord : G
+checksum : 15b4cea5198112e7225ef6d677fdd1d0
+survey_type : cmbpol
+instrument : QUIET
+hips : yes
+
+[QUIET-Q-CMB-4]
+handler : hpx_file
+description : "Plot of the CMB-4 field for QUIET's Q band."
+citation : "Private communication"
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Qband_CMB-4_hitmap.fits.gz
+coord : G
+checksum : 0d174f26c59aa3f94606ad18a47c6f6d
+survey_type : cmbpol
+instrument : QUIET
+hips : yes
+
+[QUIET-W-CMB-1]
+handler : hpx_file
+description : "Plot of the CMB-1 field for QUIET's W band."
+citation : "Private communication"
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Wband_CMB-1_hitmap.fits.gz
+coord : G
+checksum : 8cac0eb6663d8d0b2a045770076a581d
+survey_type : cmbpol
+instrument : QUIET
+
+[QUIET-W-CMB-2]
+handler : hpx_file
+description : "Plot of the CMB-2 field for QUIET's W band."
+citation : "Private communication"
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Wband_CMB-2_hitmap.fits.gz
+coord : G
+checksum : c7589d62b2f0eca1504f5ecb619b2b0e
+survey_type : cmbpol
+instrument : QUIET
+
+[QUIET-W-CMB-3]
+handler : hpx_file
+description : "Plot of the CMB-3 field for QUIET's W band."
+citation : "Private communication"
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Wband_CMB-3_hitmap.fits.gz
+coord : G
+checksum : d6a4c8704734dfbd087b51552d41fcac
+survey_type : cmbpol
+instrument : QUIET
+
+[QUIET-W-CMB-4]
+handler : hpx_file
+description : "Plot of the CMB-4 field for QUIET's W band."
+citation : "Private communication"
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Wband_CMB-4_hitmap.fits.gz
+coord : G
+checksum : 640a5e649e0b761536203bba619c1ff7
+survey_type : cmbpol
+instrument : QUIET
+
+[QUIET-Q-G-1]
+handler : hpx_file
+description : "Plot of the G-1 galaxy field for QUIET's Q band."
+citation : http://lambda.gsfc.nasa.gov/data/suborbital/QUIET/quiet_qband_G-1_Ncov_v1.hdf
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Qband_G-1_hitmap.fits.gz
+coord : G
+checksum : 618f61ac58bed9741fd52345085e4c5a
+survey_type : cmbpol
+instrument : QUIET
+hips : yes
+
+[QUIET-Q-G-2]
+handler : hpx_file
+description : "Plot of the G-2 galaxy field for QUIET's Q band."
+citation : http://lambda.gsfc.nasa.gov/data/suborbital/QUIET/quiet_qband_G-2_Ncov_v1.hdf
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Qband_G-2_hitmap.fits.gz
+coord : G
+checksum : d37db8a1c1edfbbfa003c83fa42be46a
+survey_type : cmbpol
+instrument : QUIET
+hips : yes
+
+[QUIET-W-G-1]
+handler : hpx_file
+description : "Plot of the G-1 galaxy field for QUIET's W band."
+citation : http://lambda.gsfc.nasa.gov/data/suborbital/QUIET/quiet_wband_G-1_Ncov_v1.hdf
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Wband_G-1_hitmap.fits.gz
+coord : G
+checksum : 9f09a4e6841306c6c0cc968085221349
+survey_type : cmbpol
+instrument : QUIET
+
+[QUIET-W-G-2]
+handler : hpx_file
+description : "Plot of the G-2 galaxy field for QUIET's W band."
+citation : http://lambda.gsfc.nasa.gov/data/suborbital/QUIET/quiet_wband_G-2_Ncov_v1.hdf
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/QUIET_Wband_G-2_hitmap.fits.gz
+coord : G
+checksum : 78fa88b679e6a9598dadc304eabf536d
+survey_type : cmbpol
+instrument : QUIET
+
+[SPIDER-90]
+handler : hpx_file
+description : "Preliminary hits map for the 90 GHz detectors on SPIDER"
+citation : "From SPIDER collaboration"
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/SPIDER_hits_90ghz.fits.gz
+checksum : 2c0be243466bc555ed86f881e9437b80
+coord : C
+survey_type : cmbpol
+instrument : SPIDER
+
+[SPIDER-150]
+handler : hpx_file
+description : "Preliminary hits map for the 150 GHz detectors on SPIDER"
+citation : "From SPIDER collaboration"
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/SPIDER_hits_150ghz.fits.gz
+checksum : d98b29c1073dbcbc2bbcd578f73db243
+coord : C
+survey_type : cmbpol
+instrument : SPIDER
+hips : yes
+
+[BOSS-LSS]
+handler : hpx_file
+description : "A binned map from the LSS DR10 source catalog."
+citation : http://data.sdss3.org/sas/dr10/boss/lss/
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/BOSS_dr10_lss.fits.gz
+coord : C
+checksum : a86167fc2223f03ddf0fe758a039ce20
+survey_type : lss
+instrument : BOSS
+hips : yes
+
+[BOSS-LSS-RANDOM2]
+handler : hpx_file
+description : "A binned map from the LSS-RANDOM2 DR10 source catalog."
+citation : http://data.sdss3.org/sas/dr10/boss/lss/
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/BOSS_dr10_lss_random2.fits.gz
+coord : C
+checksum : b8adac7f74cb07cd33fefd88dae71068
+survey_type : lss
+instrument : BOSS
+
+[BOSS-QSO]
+handler : hpx_file
+description : "A binned map from the BOSS QSO DR12 source catalog."
+citation : http://data.sdss3.org/sas/dr12/boss/qso/DR12Q/
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/BOSS_dr12_qso.fits.gz
+coord : C
+checksum : 6f927dbbd9c4f226b9f2d7e5b2b8354a
+survey_type : lss
+instrument : BOSS
+hips : yes
+
+[LSST]
+handler : hpx_file
+url : http://lambda.gsfc.nasa.gov/data/footprint-maps/opsim_nvisits_g.fits.gz
+description : "LSST G band nvisits map"
+citation : https://github.com/LSST-nonproject/lsst_footprint_example
+coord : C
+checksum : c545835d55ae308f4489d5c134c456f3
+survey_type : lss
+instrument : LSST
+hips : yes

@@ -1,0 +1,11 @@
+[B03-DEEP]
+handler : polygon
+description : "Plot of the deep region for B03. Generated from vertices read off from figure in paper."
+citation : http://arxiv.org/abs/astro-ph/0507494
+vertex1 : 76d,-40d
+vertex2 : 89d,-40d
+vertex3 : 89d,-50d
+vertex4 : 76d,-50d
+coord : C
+survey_type : cmbpol
+instrument : BOOMERANG

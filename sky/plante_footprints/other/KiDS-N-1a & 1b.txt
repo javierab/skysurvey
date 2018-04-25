@@ -1,0 +1,12 @@
+[KIDS-N-1a,rgb(000),
+:v:ertex1 : 12;, 3
+:v:ertex2 : 10;, 3
+:v:ertex3 : 10;, -5
+:v:ertex4 : 12;, -5
+[KIDS-N-1b,rgb(000),
+:v:ertex1 : 12;0.01, -5
+:v:ertex2 : 15;, -5
+:v:ertex3 : 15;, -3
+:v:ertex4 : 15;52, -3
+:v:ertex5 : 15;52, 3
+:v:ertex6 : 12;0.01, 3

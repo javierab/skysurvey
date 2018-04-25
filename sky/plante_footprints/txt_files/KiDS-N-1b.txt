@@ -1,0 +1,13 @@
+[KIDS-N-1b]
+handler : polygon
+description : "Kilo-Degree Survey northern patch 1, part of outline on other side of 180 degrees RA" 
+citation : http://www.astro-wise.org/projects/KIDS/
+vertex1 : 12h0.01m, -5d
+vertex2 : 15h, -5d
+vertex3 : 15h, -3d
+vertex4 : 15h52m, -3d
+vertex5 : 15h52m, 3d
+vertex6 : 12h0.01m, 3d
+coord : C
+survey_type : lss
+instrument : KIDS

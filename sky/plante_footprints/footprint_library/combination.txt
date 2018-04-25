@@ -1,0 +1,111 @@
+[SPT-SZ]
+handler : combination
+description : "SPT-SZ full survey footprint consisting of 19 contiguous rectangular patches"
+citation : http://arxiv.org/abs/1210.7231
+components : SPT-SZ-5H30-55,SPT-SZ-23H30-55,SPT-SZ-21H-60,SPT-SZ-3H30-60,SPT-SZ-21H-50,SPT-SZ-4H10-50,SPT-SZ-0H50-50,SPT-SZ-2H30-50,SPT-SZ-1H-60,SPT-SZ-5H30-45,SPT-SZ-6H30-55,SPT-SZ-23H-62.5,SPT-SZ-21H-42.5,SPT-SZ-22H30-55,SPT-SZ-23H-45,SPT-SZ-6H-62.5,SPT-SZ-3H30-42.5,SPT-SZ-1H-42.5,SPT-SZ-6H30-45
+survey_type : cmb
+instrument : SPT
+
+[QUIET-Q-CMB]
+handler : combination
+description : "Plot of all the CMB patches for QUIET Q band."
+citation : http://lambda.gsfc.nasa.gov
+components : QUIET-Q-CMB-1,QUIET-Q-CMB-2,QUIET-Q-CMB-3,QUIET-Q-CMB-4
+survey_type : cmbpol
+instrument : QUIET
+
+[QUIET-W-CMB]
+handler : combination
+description : "Plot of all the CMB patches for QUIET W band."
+citation : http://lambda.gsfc.nasa.gov
+components : QUIET-W-CMB-1,QUIET-W-CMB-2,QUIET-W-CMB-3,QUIET-W-CMB-4
+survey_type : cmbpol
+instrument : QUIET
+
+[QUIET-Q-GAL]
+handler : combination
+description : "Plot of all the galaxy patches for QUIET Q band."
+citation : http://lambda.gsfc.nasa.gov
+components : QUIET-Q-G-1,QUIET-Q-G-2
+survey_type : cmbpol
+instrument : QUIET
+
+[QUIET-W-GAL]
+handler : combination
+description : "Plot of all the galaxy patches for QUIET W band."
+citation : http://lambda.gsfc.nasa.gov
+components : QUIET-W-G-1,QUIET-W-G-2
+survey_type : cmbpol
+instrument : QUIET
+
+[QUIET-Q]
+handler : combination
+description : "Plot of all the fields for QUIET (CMB+galaxy) Q band."
+citation : http://arxiv.org/abs/1012.3191
+components : QUIET-Q-CMB,QUIET-Q-GAL
+survey_type : cmbpol
+instrument : QUIET
+
+[QUIET-W]
+handler : combination
+description : "Plot of all the fields for QUIET (CMB+galaxy) W band."
+citation : http://arxiv.org/abs/1012.3191
+components : QUIET-W-CMB,QUIET-W-GAL
+survey_type : cmbpol
+instrument : QUIET
+
+[POLARBEAR]
+handler : combination
+description : "Plots of the all the patches for the first season of PB observations. Positions and sizes are taken from table in paper."
+citation : http://arxiv.org/abs/1403.2369
+components : POLARBEAR-RA23,POLARBEAR-RA12,POLARBEAR-RA4p5
+survey_type : cmbpol
+instrument : POLARBEAR
+
+[B03]
+handler : combination
+description : "Plot of the shallow and deep regions for B03. Generated from vertices read off from figure in paper."
+citation : http://arxiv.org/abs/astro-ph/0507494
+components : B03-SHALLOW,B03-DEEP
+survey_type : cmbpol
+instrument : BOOMERANG
+
+[WFIRST-HLS]
+handler : combination
+description : "Wide-Field Infrared Survey Telescope High Latitude Survey from the Science Definition Team report 2015; combination of nine individual rectangular regions"
+citation : http://wfirst.gsfc.nasa.gov/science/sdt_public/WFIRST-AFTA_SDT_Report_150310_Final.pdf
+components : WFIRST-HLS-1,WFIRST-HLS-2,WFIRST-HLS-3,WFIRST-HLS-4,WFIRST-HLS-5,WFIRST-HLS-6,WFIRST-HLS-7,WFIRST-HLS-8,WFIRST-HLS-9
+survey_type : lss
+instrument : WFIRST
+
+[KIDS-N-1]
+handler : combination
+description : "Kilo-Degree Survey northern patch 1" 
+citation : http://www.astro-wise.org/projects/KIDS/
+components : KIDS-N-1a, KIDS-N-1b
+survey_type : lss
+instrument : KIDS
+
+[KIDS-N]
+handler : combination
+description : "Kilo-Degree Survey north patches"
+citation : http://www.astro-wise.org/projects/KIDS/
+components : KIDS-N-1, KIDS-N-2
+survey_type : lss
+instrument : KIDS
+
+[KIDS]
+handler : combination
+description : "Kilo-Degree Survey north and south patches"
+citation : http://www.astro-wise.org/projects/KIDS/
+components : KIDS-N, KIDS-S
+survey_type : lss
+instrument : KIDS
+
+[CFHTLENS]
+handler : combination
+description : "The Canada-France-Hawaii Telescope Lensing Survey regions"
+citation : https://arxiv.org/abs/1210.8156
+components : CFHTLENS-W1,CFHTLENS-W2,CFHTLENS-W3,CFHTLENS-W4
+survey_type : lss
+instrument : CFHTLENS

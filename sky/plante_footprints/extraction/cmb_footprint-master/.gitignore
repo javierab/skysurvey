@@ -1,0 +1,5 @@
+*.fits
+*.gz
+*.swp
+*.pyc
+*.png
